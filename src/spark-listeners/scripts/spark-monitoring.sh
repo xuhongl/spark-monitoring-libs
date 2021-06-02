@@ -5,7 +5,7 @@ set -o pipefail
 
 # These environment variables would normally be set by Spark scripts
 # However, for a Databricks init script, they have not been set yet.
-# We will keep the names the same here, but not export them.
+# We will keep the names the same here, but not export them..
 # These must be changed if the associated Spark environment variables
 # are changed.
 DB_HOME=/databricks
