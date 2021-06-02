@@ -1,0 +1,3 @@
+/spark-monitoring/src/spark-listeners-loganalytics/src/test/java/com/microsoft/pnp/client/loganalytics/ResourceIdTest.java
+/spark-monitoring/src/spark-listeners-loganalytics/src/test/java/com/microsoft/pnp/logging/loganalytics/LogAnalyticsAppenderTest.java
+/spark-monitoring/src/spark-listeners-loganalytics/src/test/java/com/microsoft/pnp/client/loganalytics/LogAnalyticsClientTester.java

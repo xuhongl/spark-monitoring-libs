@@ -1,0 +1,164 @@
+[36mDiscovery starting.[0m
+[36mDiscovery completed in 2 seconds, 521 milliseconds.[0m
+[36mRun starting. Expected test count is: 144[0m
+[32mRpcMetricsSystemsSuite:[0m
+[32m- metricsSource cannot be null[0m
+[32m- counter() returns named counter[0m
+[32m- histogram() returns named histogram[0m
+[32m- meter() returns named meter[0m
+[32m- timer() returns named timer[0m
+[32m- gauge() returns named gauge[0m
+[32m- counter() throws a SparkException for a counter that does not exist[0m
+[32mLocalMetricsSystemsSuite:[0m
+[32m- metricsSource cannot be null[0m
+[32m- counter() returns named counter[0m
+[32m- histogram() returns named histogram[0m
+[32m- meter() returns named meter[0m
+[32m- timer() returns named timer[0m
+[32m- gauge() returns named gauge[0m
+[32m- gauge() throws a SparkException for a gauge that does not inherit from SettableGauge[T][0m
+[32m- counter() throws a SparkException for a counter that does not exist[0m
+[32mMetricProxiesSuite:[0m
+[32m- CounterProxy calls sendMetric with a CounterMessage for inc()[0m
+[32m- CounterProxy calls sendMetric with a CounterMessage for inc(Long)[0m
+[32m- CounterProxy calls sendMetric with a CounterMessage for dec()[0m
+[32m- CounterProxy calls sendMetric with a CounterMessage for dec(Long)[0m
+[32m- HistogramProxy calls sendMetric with a HistogramMessage for update(Int)[0m
+[32m- HistogramProxy calls sendMetric with a HistogramMessage for update(Long)[0m
+[32m- HistogramProxy calls sendMetric with a HistogramMessage for update(Long) and non-default reservoir[0m
+[32m- MeterProxy calls sendMetric with a MeterMessage for mark()[0m
+[32m- MeterProxy calls sendMetric with a MeterMessage for mark(Long)[0m
+[32m- MeterProxy calls sendMetric with a MeterMessage for mark(Long) and non-default clock[0m
+[32m- TimerProxy calls sendMetric with a TimerMessage for update(Long, TimeUnit)[0m
+[32m- TimerProxy calls sendMetric with a TimerMessage for time(Callable)[0m
+[32m- TimerProxy calls sendMetric with a TimerMessage for update(Long, TimeUnit) and non-default reservoir and clock[0m
+[32m- SettableGaugeProxy calls sendMetric with a SettableGaugeMessage for set(Long)[0m
+[32m- SettableGauge getValue returns same value as set(T)[0m
+[32mLogAnalyticsStreamingListenerSuite:[0m
+[32m- should invoke sendToSink for StreamingListenerStreamingStarted event with full class name[0m
+[32m- should invoke sendToSink for StreamingListenerReceiverStarted event with full class name[0m
+[32m- should invoke sendToSink for StreamingListenerReceiverError event with full class name[0m
+[32m- should invoke sendToSink for StreamingListenerReceiverStopped event with full class name[0m
+[32m- should invoke sendToSink for StreamingListenerBatchSubmitted event with full class name[0m
+[32m- should invoke sendToSink for StreamingListenerBatchStarted event with full class name[0m
+[32m- should invoke sendToSink for StreamingListenerBatchCompleted event with full class name[0m
+[32m- should invoke sendToSink for StreamingListenerOutputOperationStarted event with full class name[0m
+[32m- should invoke sendToSink for StreamingListenerOutputOperationCompleted event with full class name[0m
+[32m- StreamingListenerStreamingStarted should have expected SparkEventTime[0m
+[32m- StreamingListenerBatchCompleted should have expected SparkEventTime[0m
+[32m- StreamingListenerBatchSubmitted should have expected SparkEventTime[0m
+[32m- StreamingListenerBatchStarted should have expected SparkEventTime[0m
+[32m- StreamingListenerBatchStarted with no processingStartTime should have SparkEventTime[0m
+[32m- StreamingListenerOutputOperationCompleted should have expected SparkEventTime[0m
+[32m- StreamingListenerOutputOperationCompleted with no endTime should have SparkEventTime[0m
+[32m- StreamingListenerOutputOperationStarted should have expected SparkEventTime[0m
+[32m- StreamingListenerOutputOperationStarted with no endTime should have SparkEventTime[0m
+[32m- StreamingListenerReceiverError should have SparkEventTime[0m
+[32m- StreamingListenerReceiverStarted should have SparkEventTime[0m
+[32m- StreamingListenerReceiverStopped should have SparkEventTime[0m
+[32mLogAnalyticsListenerSuite:[0m
+[32m- should invoke onStageSubmitted [0m
+[32m- should invoke onTaskStart [0m
+[32m- should invoke onTaskGettingResult [0m
+[32m- should invoke onTaskEnd [0m
+[32m- should invoke onEnvironmentUpdate [0m
+[32m- should invoke onStageCompleted [0m
+[32m- should invoke onJobStart [0m
+[32m- should invoke onJobEnd [0m
+[32m- should invoke onBlockManagerAdded [0m
+[32m- should invoke onBlockManagerRemoved [0m
+[32m- should invoke onUnpersistRDD [0m
+[32m- should invoke onApplicationStart [0m
+[32m- should invoke onApplicationEnd [0m
+[32m- should invoke onExecutorAdded [0m
+[32m- should invoke onExecutorRemoved [0m
+[32m- should invoke onExecutorBlacklisted [0m
+[32m- should invoke onExecutorUnblacklisted [0m
+[32m- should onExecutorMetricsUpdate be always no op[0m
+[32m- should invoke onNodeBlacklisted [0m
+[32m- should invoke onNodeUnblacklisted [0m
+[32m- should not invoke onBlockUpdated when logBlockUpdates is set to false [0m
+[32m- should invoke onBlockUpdated when logBlockUpdates is set to true [0m
+[32m- should invoke onOtherEvent but don't log if logevent is not enabled [0m
+[32m- should invoke onOtherEvent but will log logevent is enabled [0m
+[32m- onStageSubmitted with time should populate expected SparkEventTime[0m
+[32m- onStageSubmitted with no submission time should populate SparkEventTime[0m
+[32m- onStageSubmitted with submission time should populate expected SparkEventTime[0m
+[32m- onEnvironmentUpdate should populate SparkEventTime field[0m
+[32m- createSink should be called[0m
+[32mRemoteMetricsSourceBuilderSuite:[0m
+[32m- namespace cannot be null[0m
+[32m- namespace cannot be empty[0m
+[32m- namespace cannot be only whitespace[0m
+[32m- RemoteMetricsSourceBuilder throws an IllegalStateException when used on a driver[0m
+[32m- RpcUtils.makeDriverRef throws a SparkException[0m
+[32m- valid namespace[0m
+[32m- registerCounter adds named CounterProxy[0m
+[32m- registerHistogram adds named HistogramProxy[0m
+[32m- registerMeter adds named MeterProxy[0m
+[32m- registerTimer adds named TimerProxy[0m
+[32m- metric name cannot be null[0m
+[32m- metric name cannot be empty[0m
+[32m- metric name cannot be only whitespace[0m
+[32m- register adds named metric[0m
+[32mListenerSuite:[0m
+[32mReceiverMetricSystemBuilderSuite:[0m
+[32m- sparkEnv cannot be null[0m
+[32m- endpointName cannot be null[0m
+[32m- endpointName cannot be empty[0m
+[32m- endpointName cannot be only whitespace[0m
+[32m- ReceiverMetricSystemBuilder cannot be used on executors[0m
+[32m- build() registers one metrics source[0m
+[32mRpcMetricsReceiverSuite:[0m
+[32m- getMetric returns valid metric[0m
+[32m- getMetric returns None for non-existent namespace[0m
+[32m- getMetric returns None for non-existent metric[0m
+[32m- getMetric returns None for valid namespace and metric, but invalid type[0m
+[32m- getMetric returns Metric subclass[0m
+[32m- getMetric returns Counter subclass[0m
+[32m- CounterMessage received with valid name and inc() called[0m
+[32m- CounterMessage received with invalid name and inc() not called[0m
+[32m- HistogramMessage received with valid name and update() called[0m
+[32m- HistogramMessage received with invalid name and update() not called[0m
+[32m- HistogramMessage received with mismatched reservoir and update() not called[0m
+[32m- MeterMessage received with valid name and mark() called[0m
+[32m- MeterMessage received with invalid name and mark() not called[0m
+[32m- MeterMessage received with mismatched clock and mark() not called[0m
+[32m- TimerMessage received with valid name and update() called[0m
+[32m- TimerMessage received with invalid name and update() not called[0m
+[32m- TimerMessage received with mismatched reservoir and update() not called[0m
+[32m- TimerMessage received with mismatched clock and update() not called[0m
+[32m- SettableGaugeMessage received with valid name and set() called[0m
+[32m- SettableGaugeMessage received with invalid name and set() not called[0m
+[32m- Unsupported message received and processing messages does not stop[0m
+[32mLocalMetricsSourceBuilderSuite:[0m
+[32m- namespace cannot be null[0m
+[32m- namespace cannot be empty[0m
+[32m- namespace cannot be only whitespace[0m
+[32m- registerCounter adds named Counter[0m
+[32m- registerHistogram adds named Histogram[0m
+[32m- registerMeter adds named Meter[0m
+[32m- registerTimer adds named Timer[0m
+[32m- metric name cannot be null[0m
+[32m- metric name cannot be empty[0m
+[32m- metric name cannot be only whitespace[0m
+[32m- register adds named metric[0m
+[32mLogAnalyticsStreamingQueryListenerSuite:[0m
+[32m- should invoke sendToSink for QueryStartedEvent with full class name[0m
+[32m- should invoke sendToSink for QueryTerminatedEvent with full class name[0m
+[32m- should invoke sendToSink for QueryProgressEvent with full class name[0m
+[32m- QueryProgressEvent should have expected SparkEventTime[0m
+[32m- QueryStartedEvent should have SparkEventTime[0m
+[32m- QueryTerminatedEvent should have SparkEventTime[0m
+[32mMetricsSystemsSuite:[0m
+[32m- getMetricsSystem registers a MetricsSource and returns a LocalMetricsSystem on driver node[0m
+[32m- getMetricsSystem registers a MetricsSource and returns a LocalMetricsSystem on executor node[0m
+[32m- buildReceiverMetricsSystem succeeds when invoked on a driver[0m
+[32m- buildReceiverMetricsSystem throws an IllegalStateException when invoked on an executor[0m
+[32m- getRemoteMetricsSystem throws an IllegalStateException when invoked on a driver[0m
+[32m- getRemoteMetricsSystem succeeds when invoked on an executor[0m
+[36mRun completed in 31 seconds, 46 milliseconds.[0m
+[36mTotal number of tests run: 144[0m
+[36mSuites: completed 13, aborted 0[0m
+[36mTests: succeeded 144, failed 0, canceled 0, ignored 0, pending 0[0m
+[32mAll tests passed.[0m
